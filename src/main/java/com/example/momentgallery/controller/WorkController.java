@@ -4,6 +4,7 @@ import com.example.momentgallery.domain.Work;
 import com.example.momentgallery.dto.WorkDTO;
 import com.example.momentgallery.service.WorkService;
 import java.io.IOException;
+import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,11 @@ public class WorkController {
         this.workService = workService;
     }
 
+    @GetMapping
+    public List<Work> workList(){
+        System.out.println("호출됨요");
+        return workService.workList();
+    }
 
     @PostMapping
     public void saveWork(@ModelAttribute WorkDTO workDTO) {
