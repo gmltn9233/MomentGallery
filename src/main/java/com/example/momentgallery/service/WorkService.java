@@ -26,4 +26,16 @@ public class WorkService {
 
         workDAO.save(work);
     }
+
+    public Work requestWork(long id) {
+
+        return workDAO.findById(id).get();
+    }
+
+    public void deleteWork(long id) {
+
+        workDAO.deleteById(id);
+    }
+
+
 }
