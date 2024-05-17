@@ -4,6 +4,7 @@ import com.example.momentgallery.dao.WorkDAO;
 import com.example.momentgallery.domain.Work;
 import com.example.momentgallery.dto.WorkDTO;
 import java.io.IOException;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,15 +16,31 @@ public class WorkService {
         this.workDAO = workDAO;
     }
 
-    public void saveWork(WorkDTO inputWork) throws IOException {
+    public void saveWork(WorkDTO inputWork) {
 
         Work work = Work.builder()
             .title(inputWork.getTitle())
             .detail(inputWork.getDetail())
             .genre(inputWork.getGenre())
-            .data(inputWork.getFile().getBytes())
+            .link(inputWork.getLink())
             .build();
 
         workDAO.save(work);
     }
+
+    public List<Work> workList(){
+        return workDAO.findAll();
+    }
+
+    public Work requestWork(long id) {
+
+        return workDAO.findById(id).get();
+    }
+
+    public void deleteWork(long id) {
+
+        workDAO.deleteById(id);
+    }
+
+
 }

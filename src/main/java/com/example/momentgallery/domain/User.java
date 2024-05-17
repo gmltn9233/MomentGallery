@@ -1,46 +1,40 @@
 package com.example.momentgallery.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.Lob;
-import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
-@Entity
 @Data
+@Entity
 @Builder
 @AllArgsConstructor
-public class Work {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
-    private String title;
+    @Column(unique = true)
+    private String userId;
 
     @NotNull
-    private String detail;
-
-    @NotNull
-    private String genre;
-
-    @Lob
-    private String link;
+    private String password;
 
     @Builder
-    public Work(String title, String detail, String genre, String link){
-        this.title = title;
-        this.detail = detail;
-        this.genre = genre;
-        this.link = link;
+    public User(String userId, String password){
+        this.userId = userId;
+        this.password = password;
     }
 
-    public Work() {
+    public User(){
 
     }
+
 }
