@@ -20,7 +20,7 @@ public class WorkController {
     }
 
     @PostMapping("/works")
-    public void saveWork(@ModelAttribute WorkDTO workDTO) throws IOException {
+    public void saveWork(@ModelAttribute WorkDTO workDTO) {
         System.out.println("title"+workDTO.getTitle());
         System.out.println("detail"+workDTO.getDetail());
         System.out.println("genre"+workDTO.getGenre());

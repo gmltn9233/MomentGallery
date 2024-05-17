@@ -15,13 +15,13 @@ public class WorkService {
         this.workDAO = workDAO;
     }
 
-    public void saveWork(WorkDTO inputWork) throws IOException {
+    public void saveWork(WorkDTO inputWork) {
 
         Work work = Work.builder()
             .title(inputWork.getTitle())
             .detail(inputWork.getDetail())
             .genre(inputWork.getGenre())
-            .data(inputWork.getFile().getBytes())
+            .link(inputWork.getLink())
             .build();
 
         workDAO.save(work);

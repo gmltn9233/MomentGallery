@@ -30,14 +30,14 @@ public class Work {
     private String genre;
 
     @Lob
-    private byte[] data;
+    private String link;
 
     @Builder
-    public Work(String title, String detail, String genre, byte[] data){
+    public Work(String title, String detail, String genre, String link){
         this.title = title;
         this.detail = detail;
         this.genre = genre;
-        this.data = data;
+        this.link = link;
     }
 
     public Work() {

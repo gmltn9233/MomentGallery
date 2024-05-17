@@ -23,6 +23,6 @@ public class WorkDTO {
     private String genre;
 
     @NotNull
-    private MultipartFile file;
+    private String link;
 
 }
