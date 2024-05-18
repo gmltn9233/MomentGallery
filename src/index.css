@@ -1,0 +1,158 @@
+@import 'reset.css';
+
+.root-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-container {
+  background-color: rgba(3, 37, 65, 1);
+}
+
+.header-wrap {
+  height: 64px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.header-left-wrap {
+  display: flex;
+}
+
+.header-left-wrap ul {
+  display: flex;
+  margin-left: 16px;
+}
+
+.header-left-wrap li {
+  margin-right: 14px;
+  padding: 8px;
+}
+
+.header-nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.home-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Viewport height */
+}
+
+.home-main-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.home-main-wrapper-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* Align items to the top */
+  overflow: hidden;
+  /* Ensure the image doesn't overflow */
+  position: relative;
+  /* Set relative positioning */
+}
+
+.home-main-wrapper-left img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: cover;
+  position: relative;
+  /* Set relative positioning */
+  margin-top: 1.3rem;
+}
+
+.login-form-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin-top: 1.5rem;
+  height: 565px;
+}
+
+.login-form-wrapper {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 400px;
+  width: 100%;
+  max-height: 55%;
+}
+
+.mg-title {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 1.3rem;
+}
+
+.btn-dark {
+  margin-bottom: 1.5rem;
+}
+
+.typo {
+  margin-left: 4rem;
+}
+
+.typo:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.drop:focus {
+  outline: none;
+}
+
+.form-control:last-child {
+  margin-bottom: 1.5rem;
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-list ul {
+  display: flex;
+}
+.nav-list ul li {
+  margin-right: 14px;
+  padding: 8px;
+}
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+}
+.nav-item:hover {
+  outline: none;
+  text-decoration: none;
+  color: white;
+}
+
+.prof:hover {
+  text-decoration: none;
+}
+
+.upload:hover {
+  text-decoration: none;
+}

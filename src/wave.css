@@ -1,0 +1,86 @@
+.wave {
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 200vw;
+    height: 180vw;
+    margin-left: -100vw;
+    margin-top: -196vw;
+    border-radius: 40%;
+    transform-origin: 50% 48%; /* 변환 기준점 조정 */
+}
+
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(150vh) rotate(360deg); /* 100% 높이만큼 내려가며 회전 */
+    }
+}
+.wave.-one {
+    animation: waveAnimation 4000ms linear;
+    opacity: 0.5;
+    background: #0af;
+}
+.wave.-two {
+    animation: waveAnimation  3500ms linear;
+    opacity: 0.1;
+    background: yellow;
+}
+
+.wave.-three {
+    animation: waveAnimation 5500ms linear;
+    opacity: 0.1;
+    background: #e8a;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden; /* Y축 스크롤도 숨김 */
+}
+
+.left-section, .right-section, .upDown-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.waveForm .left-section {
+    flex: 1;
+    padding: 20px;
+    width: 100px;
+    background-color:  #ADD8E6;
+    height: 200px;
+    margin-top: 560px;
+}
+
+.waveForm .video-container {
+    flex: 2;
+    background-color:  #ADD8E6; /* 비디오 대신 노란색 배경 */
+    opacity: 0.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 1;
+    color: black;
+    border-radius: 20px;
+    margin: 50px 225px 50px 30px;
+}
+
+.before-button{
+    z-index: 1;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    width: 55px;
+    height: 55px;
+    color: gray;
+    position: absolute;
+    top: 700px;
+    left: 800px;
+}

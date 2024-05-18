@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+}
+:root{
+  --white-color: #fff;
+  --black-color: #140a00;
+  --grey-dark-color: #363636;
+  --grey-light-color: #e0e0e0;
+}
